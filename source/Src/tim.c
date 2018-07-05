@@ -74,7 +74,7 @@ void MX_TIM8_Init(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_FALLING;
   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
   sConfigIC.ICFilter = 0;
@@ -86,7 +86,7 @@ void MX_TIM8_Init(void)
   HAL_TIM_IC_Start(&htim8,TIM_CHANNEL_4);
   
       /* Enable the TIM Capture/Compare 4  DMA request */
-  __HAL_TIM_ENABLE_DMA(&htim8, TIM_DMA_ID_CC4);
+  //__HAL_TIM_ENABLE_DMA(&htim8, TIM_DMA_ID_CC4);
 
 }
 
@@ -108,7 +108,7 @@ void HAL_TIM_IC_MspInit(TIM_HandleTypeDef* tim_icHandle)
     */
     GPIO_InitStruct.Pin = GPIO_PIN_9;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Pull = GPIO_PULLDOWN;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     GPIO_InitStruct.Alternate = GPIO_AF3_TIM8;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);

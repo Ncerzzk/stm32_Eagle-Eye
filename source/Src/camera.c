@@ -9,13 +9,11 @@ extern DMA_HandleTypeDef hdma_tim8_ch4_trig_com;
 
 uint8_t camera_buffer[CAMERA_H*CAMERA_W/8];
 
-int camera_cnt=0;
-
 reg_s ov7725_eagle_reg[] =
 {
-    //寄存器，寄存器值次
+    //寄存器，寄存器值
     {OV7725_COM4         , 0xC1},
-    {OV7725_CLKRC        , 0x00},
+    {OV7725_CLKRC        , 0x02},   //50帧，如果要150帧，将02改成00
     {OV7725_COM2         , 0x03},
     {OV7725_COM3         , 0xD0},
     {OV7725_COM7         , 0x40},
@@ -94,9 +92,6 @@ extern DMA_HandleTypeDef hdma_memtomem_dma2_stream0;
 extern TIM_HandleTypeDef htim8;
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
   TIM_HandleTypeDef * htim=&htim8;
-  
-
-  
   if(img_state==IMG_Start){
     if(GPIO_Pin==GPIO_PIN_8){
       HAL_NVIC_DisableIRQ(EXTI9_5_IRQn);
@@ -143,9 +138,9 @@ void camera_init(){
 
 void IMG_OK_Callback(DMA_HandleTypeDef *_hdma){
   img_state=IMG_OK;
-  //uprintf("ok!\r\n");
-  //vcan_sendimg(camera_buffer,sizeof(camera_buffer));
-  //img_ok=0;
+  __HAL_TIM_DISABLE_DMA(&htim8, TIM_DMA_CC4);  
+  //震惊，没加这一句的话，右边的图像会跑的左边
+  //令人费解，因为已经设置了DMA模式为NORMAL，应该传输完后就停止了阿
 }
 
 void vcan_sendimg(void *imgaddr, uint32_t imgsize)
@@ -160,7 +155,5 @@ void vcan_sendimg(void *imgaddr, uint32_t imgsize)
 
 void get_img(){
   img_state=IMG_Start;
-  //__HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_8);
   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
-
 }

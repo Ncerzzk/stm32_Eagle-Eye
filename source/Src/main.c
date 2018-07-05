@@ -104,8 +104,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   camera_init();
   uprintf("hello,world!\r\n");
-  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
-  //HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 3, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
   /* USER CODE END 2 */
 
@@ -114,9 +114,11 @@ int main(void)
   while (1)
   {
   /* USER CODE END WHILE */
+    
     get_img();
     if(img_state==IMG_OK)
       vcan_sendimg(camera_buffer,600);
+
   /* USER CODE BEGIN 3 */
 
   }
