@@ -5,6 +5,11 @@ D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\dma.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\gpio.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\i2c.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\main.pbi
+D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_msp.pbi
+D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_it.pbi
+D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\tim.pbi
+D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\usart.pbi
+D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\system_stm32f4xx.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_can.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_cortex.pbi
@@ -16,7 +21,6 @@ D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_flash_ramfunc.pb
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_gpio.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_i2c.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_i2c_ex.pbi
-D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_msp.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_pwr.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_pwr_ex.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_rcc.pbi
@@ -24,7 +28,3 @@ D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_rcc_ex.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_tim.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_tim_ex.pbi
 D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_hal_uart.pbi
-D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\stm32f4xx_it.pbi
-D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\system_stm32f4xx.pbi
-D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\tim.pbi
-D:\电路板\鹰眼_stm32\source\EWARM\source\Obj\usart.pbi

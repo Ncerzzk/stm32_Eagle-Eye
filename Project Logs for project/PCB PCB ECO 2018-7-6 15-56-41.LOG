@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=S1 Old Footprint=KEY New Footprint=KEY_SMD
+Change Component Designator: OldDesignator=camera NewDesignator=H*
+Change Component Designator: OldDesignator=USART2 NewDesignator=P?
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "150R"; VariantName = "[No Variations]"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "150R"; VariantName = "[No Variations]"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Value"; Value = "4.7K"; VariantName = "[No Variations]"
